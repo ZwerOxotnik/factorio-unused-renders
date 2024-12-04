@@ -1,0 +1,13 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2024-12-04
+  Changes:
+    - Images size were changed to 256x256 for files from tech-icon folder
+    - Reduced file size for all images
+    - Deleted fluid/original folder
+    - Deleted item/original folder
+    - Deleted samples.png file
+    - Added changelog.txt file
+    - Added info.json file
+    - Original source: https://github.com/malcolmriley/unused-renders/commit/0d2c456803dbdf1f10dd282b1fb9356526feb276
+    - Changes were made by ZwerOxotnik
