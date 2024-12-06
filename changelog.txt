@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2024-12-06
+  Changes:
+    - Added lua files to store image height, width as table, which named like images
+    - Added data.lua file
+    - Added util.lua file
+    - Added .scripts folder with several files (more info in .scripts folder) 
+    - Added locale/en/unused-renders-m.cfg (localization is far from done)
+    - Added prototypes/item folder with several files to store ItemPrototype for data stage
+    - Added items_data_path.lua file as table which leads to lua files /\
+    - Added .vscode/tasks.json
+  Scripting:
+    - Added global variable "unused_renders_m" for data stage (see data.lua for more info and functions)
+    - util.lua stores only functions, which is necessary for prototypes
+---------------------------------------------------------------------------------------------------
 Version: 0.0.1
 Date: 2024-12-04
   Changes:
