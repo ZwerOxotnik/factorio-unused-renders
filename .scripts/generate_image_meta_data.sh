@@ -49,22 +49,29 @@ if [ $infojson_exists = true ] ; then
 	fi
 fi
 
-generate_lua_files () {		
+generate_lua_files () {
 	local path_to_folder="$mod_folder/$1"
 	local format=*.[Pp][Nn][Gg]
 	local files=($(find $path_to_folder/ -name "$format" -type f))
+
+	local list_file="$path_to_folder/image_data_paths.lua"
+	rm -f $list_file
+	echo -e "return {" >> $list_file
+
 	for path in "${files[@]}"; do
 		local file_name="$(basename -- $path)"
 		local file_name=${file_name%.*}
 		local lua_file="$path_to_folder/$file_name.lua"
 		rm -f $lua_file
 		echo -e "return {$(identify -format 'width=%w, height=%h' $path)}" >> $lua_file
-	done	
-} 
+		echo -e "\"__unused-renders-m__/$1/$file_name\"," >> $list_file
+	done
+	echo -e "}\n" >> $list_file
+}
 
-generate_lua_files "fluid/mipped" 
-generate_lua_files "item/mipped" 
-generate_lua_files "tech-icon" 
+generate_lua_files "fluid/mipped"
+generate_lua_files "item/mipped"
+generate_lua_files "tech-icon"
 
 }
 main
