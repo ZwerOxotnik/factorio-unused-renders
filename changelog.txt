@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 2024-12-07
+  Changes:
+    - Added recommended_item_scales.lua
+    - Added util.get_recommended_item_scale(path: string|data.FileName|data.SpriteSource): double?
+    - Added unused_renders_m.get_recommended_item_scale(path: string|data.FileName|data.SpriteSource): double?
+---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 2024-12-07
   Scripting:
