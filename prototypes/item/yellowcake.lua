@@ -8,9 +8,9 @@ local item = {
     subgroup = 'raw-material',
     order = 'g[uranium-powder-yellowcake]',
     pictures = {
-        util.get_image_as_sprite("__unused-renders-m__/item/mipped/pile-dust-yellowcake-1.png", 0.4),
-        util.get_image_as_sprite("__unused-renders-m__/item/mipped/pile-dust-yellowcake-2.png", 0.4),
-        util.get_image_as_sprite("__unused-renders-m__/item/mipped/pile-dust-yellowcake-3.png", 0.4),
+        util.get_image_as_sprite("__unused-renders-m__/item/mipped/pile-dust-yellowcake-1.png"),
+        util.get_image_as_sprite("__unused-renders-m__/item/mipped/pile-dust-yellowcake-2.png"),
+        util.get_image_as_sprite("__unused-renders-m__/item/mipped/pile-dust-yellowcake-3.png"),
     },
     stack_size = 100
 }

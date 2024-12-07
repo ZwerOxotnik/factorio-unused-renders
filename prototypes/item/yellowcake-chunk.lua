@@ -8,7 +8,7 @@ local item = {
     subgroup = 'raw-material', -- TODO: recheck
     order = 'g[uranium-powder-yellowcake-chunk]',
     pictures = {
-        util.get_image_as_sprite("__unused-renders-m__/item/mipped/pile-chunk-yellowcake-4.png", 0.4)
+        util.get_image_as_sprite("__unused-renders-m__/item/mipped/pile-chunk-yellowcake-4.png")
     },
     stack_size = 100
 }

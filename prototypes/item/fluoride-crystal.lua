@@ -8,7 +8,7 @@ local item = {
     subgroup = "raw-material", -- TODO: recheck
     order = "g[fluoride-crystal]", -- It'll be improved at some point
     pictures = {
-        util.get_image_as_sprite("__unused-renders-m__/item/mipped/material-crystal-fluorite-2.png", 0.5)
+        util.get_image_as_sprite("__unused-renders-m__/item/mipped/material-crystal-fluorite-2.png")
     },
     stack_size = 50,
 }
