@@ -64,7 +64,7 @@ generate_lua_files () {
 		local lua_file="$path_to_folder/$file_name.lua"
 		rm -f $lua_file
 		echo -e "return {$(identify -format 'width=%w, height=%h' $path)}" >> $lua_file
-		echo -e "\"__unused-renders-m__/$1/$file_name\"," >> $list_file
+		echo -e "[\"__unused-renders-m__/$1/$file_name\"] = true," >> $list_file
 	done
 	echo -e "}\n" >> $list_file
 }
