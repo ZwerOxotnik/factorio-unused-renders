@@ -41,6 +41,21 @@ unused_renders_m.items = setmetatable(unused_renders_m.items, {
 })
 
 
+-- Tracks items to find matched items with this mod by name
+if lazyAPI then
+    lazyAPI.add_listener("on_new_prototype", "all", "unused-renders-m_check_new_prototype", function(event)
+        if not lazyAPI.all_items[prototype.type] then return end
+
+        local prototype = event.prototype
+        local name = prototype.name
+        local is_matched_item = unused_renders_m.items_data_path[name]
+        if is_matched_item then
+            unused_renders_m.items[name] = prototype
+        end
+    end)
+end
+
+
 --- Examples
 --[[
     data:extend({unused_renders_m.items["yellowcake"]})
