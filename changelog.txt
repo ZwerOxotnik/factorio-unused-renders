@@ -6,6 +6,7 @@ Date: 2024-12-07
     - Added item/mipped/image_data_paths.lua
     - Added tech-icon/image_data_paths.lua
     - .scripts/generate_image_meta_data.sh generates new files to provide paths to lua files with image meta data
+    - Changes were made by ZwerOxotnik
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.2
 Date: 2024-12-06
@@ -18,6 +19,7 @@ Date: 2024-12-06
     - Added prototypes/item folder with several files to store ItemPrototype for data stage
     - Added items_data_path.lua file as table which leads to lua files /\
     - Added .vscode/tasks.json
+    - Changes were made by ZwerOxotnik
   Scripting:
     - Added global variable "unused_renders_m" for data stage (see data.lua for more info and functions)
     - util.lua stores only functions, which is necessary for prototypes
