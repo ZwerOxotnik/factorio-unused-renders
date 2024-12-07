@@ -1,3 +1,4 @@
+local recommended_item_scales = require("__unused-renders-m__/recommended_item_scales")
 local util = {}
 
 
@@ -6,6 +7,7 @@ util.correct_file_path(path: string|data.FileName): string|data.FileName
 util.get_image_as_sprite(path: string|data.FileName, scale: double?, data: table|data.Sprite?): data.Sprite
 util.get_icon_size(path: string|data.FileName): integer
 util.set_icon_data(data.PrototypeBase|table, path: string|data.FileName)
+util.get_recommended_item_scale(path: string|data.FileName|data.SpriteSource): double?
 ]]--
 
 
@@ -17,6 +19,21 @@ function util.correct_file_path(path)
     end
 
     return path
+end
+
+
+---@param path string|data.FileName|data.SpriteSource
+---@return double?
+function util.get_recommended_item_scale(path)
+    local _type = type(path)
+    if _type == "string" then
+        if path:find("%.[Pp][Nn][Gg]$") then
+            return recommended_item_scales[path]
+        end
+        return recommended_item_scales[path .. ".png"]
+    elseif _type == "table" then
+        return recommended_item_scales[path.filename]
+    end
 end
 
 
@@ -38,7 +55,7 @@ function util.get_image_as_sprite(path, scale, data)
 
     data.filename = util.correct_file_path(path)
     data.size  = util.get_icon_size(data.filename)
-    data.scale = scale
+    data.scale = scale or util.get_recommended_item_scale(path)
 
     if path:find("mipped") then
         data.mipmap_count = 4
