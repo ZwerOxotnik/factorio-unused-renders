@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 2024-12-07
+  Changes:
+    - Added fluid/mipped/image_data_paths.lua
+    - Added item/mipped/image_data_paths.lua
+    - Added tech-icon/image_data_paths.lua
+    - .scripts/generate_image_meta_data.sh generates new files to provide paths to lua files with image meta data
+---------------------------------------------------------------------------------------------------
 Version: 0.0.2
 Date: 2024-12-06
   Changes:
