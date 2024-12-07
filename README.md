@@ -1,6 +1,6 @@
 # Unused renders for Factorio mods
 
-It also provides meta data about images, functions etc. in order to simplify/help with Factorio API, with mod compabiltiy and data consistency.
+It also provides meta data about images, templates, functions etc. in order to simplify/help with Factorio API, with mod compabiltiy and data consistency.
 
 All images from https://github.com/malcolmriley/unused-renders repository made by [Malcolm Riley](https://github.com/malcolmriley) (the mentioned repository contains **higher resolution** images and wiki)
 
