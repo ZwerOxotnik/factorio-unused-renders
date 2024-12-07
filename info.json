@@ -6,5 +6,7 @@
   "author": "Malcolm Riley",
   "contact": "",
   "homepage": "",
-  "dependencies": []
+  "dependencies": [
+    "? zk-lib"
+  ]
 }
