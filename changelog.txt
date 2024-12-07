@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2024-12-07
+  Scripting:
+    - Tracks items to keep matched items in unused_renders_m.items by keys of items_data_path.lua
+---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 2024-12-07
   Changes:
