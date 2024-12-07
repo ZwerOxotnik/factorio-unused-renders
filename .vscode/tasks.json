@@ -12,7 +12,7 @@
 			}
 		},
 		{
-			"label": "Generate meta data",
+			"label": "Generate image meta data",
 			"type": "shell",
 			"command": "bash",
 			"args": [".scripts/generate_image_meta_data.sh"],
