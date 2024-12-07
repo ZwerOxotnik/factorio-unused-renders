@@ -3,6 +3,9 @@ unused_renders_m = {
     mipped_item_path_folder  = "__unused-renders-m__/item/mipped/",
     mipped_fluid_path_folder = "__unused-renders-m__/fluid/mipped/",
     tech_icon_path_folder    = "__unused-renders-m__/tech-icon/",
+    mipped_item_paths  = require("__unused-renders-m__/item/mipped/image_data_paths"),
+    mipped_fluid_paths = require("__unused-renders-m__/fluid/mipped/image_data_paths"),
+    tech_icon_paths    = require("__unused-renders-m__/tech-icon/image_data_paths"),
     items_data_path = require("__unused-renders-m__/items_data_path"),
 }
 unused_renders_m.items_data_path = require("__unused-renders-m__/items_data_path")
