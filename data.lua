@@ -14,6 +14,8 @@ unused_renders_m.items_data_path = require("__unused-renders-m__/items_data_path
 ---          but keys could lead to the same prototype and it doesn't
 ---          mean they exist in data.raw.
 ---          In other cases use unused_renders_m.items_data_path
+--- Also, please, add item prototypes into unused_renders_m.items, if you added them by other methods.
+--- It helps to improve mod compatibility.
 ---@type table<string, data.ItemPrototype>
 unused_renders_m.items = {}
 
