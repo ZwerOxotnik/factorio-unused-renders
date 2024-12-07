@@ -18,6 +18,7 @@ unused_renders_m.correct_file_path(path: string|data.FileName): string|data.File
 unused_renders_m.get_image_as_sprite(path: string|data.FileName, scale: double?, data: table|data.Sprite?): data.Sprite
 unused_renders_m.get_icon_size(path: string|data.FileName): integer
 unused_renders_m.set_icon_data(data.PrototypeBase|table, path: string|data.FileName)
+unused_renders_m.get_recommended_item_scale(path: string|data.FileName|data.SpriteSource): double?
 ]]--
 
 
@@ -69,7 +70,7 @@ end
         order = "g[fluoride]",
         stack_size = 50,
         pictures = {
-            unused_renders_m.get_image_as_sprite("item/mipped/material-crystal-fluorite-2.png", 0.5),
+            unused_renders_m.get_image_as_sprite("item/mipped/material-crystal-fluorite-2.png"),
         }
     }})
 ]]
@@ -79,9 +80,9 @@ end
 --[[
 for name in pairs(unused_renders_m.items_data_path) do
     if lazyAPI then
-        lazyAPI.add_prototype(items_data_path.items[name])
+        lazyAPI.add_prototype(unused_renders_m.items[name])
     else
-        data:extend({items_data_path.items[name]})
+        data:extend({unused_renders_m.items[name]})
     end
 end
 ]]--
