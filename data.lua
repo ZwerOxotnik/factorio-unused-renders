@@ -9,8 +9,13 @@ unused_renders_m = {
     items_data_path = require("__unused-renders-m__/items_data_path"),
 }
 unused_renders_m.items_data_path = require("__unused-renders-m__/items_data_path")
- ---@type table<string, data.ItemPrototype>
-unused_renders_m.items = {} -- WARNING: use pairs only if you're looking for created prototypes, but keys could lead to the same prototype. In other cases use unused_renders_m.items_data_path
+
+--- WARNING: use pairs only if you're looking for created prototypes,
+---          but keys could lead to the same prototype and it doesn't
+---          mean they exist in data.raw.
+---          In other cases use unused_renders_m.items_data_path
+---@type table<string, data.ItemPrototype>
+unused_renders_m.items = {}
 
 
 --[[
