@@ -99,15 +99,16 @@ local item = {
 	order = "g[fluoride]",
 	stack_size = 50,
 	pictures = {
-		unused_renders_m.get_image_as_sprite("item/mipped/material-crystal-fluorite-2.png"),
+		unused_renders_m.get_image_as_sprite("item/mipped/material-crystal-fluorite-2.png")
+	},
 }
 
 if lazyAPI then
 	lazyAPI.add_prototype(item)
 else
 	data:extend({item}})
+	unused_renders_m.prototypes.items[item.name] = item
 end
-unused_renders_m.prototypes.items[item.name] = item
 ]]
 
 
