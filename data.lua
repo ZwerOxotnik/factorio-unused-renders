@@ -65,9 +65,9 @@ unused_renders_m.prototypes.items = setmetatable(unused_renders_m.prototypes.ite
 -- Tracks items to find matched items with this mod by name
 if lazyAPI then
     lazyAPI.add_listener("on_new_prototype", "all", "unused-renders-m_check_new_prototype", function(event)
+        local prototype = event.prototype
         if not lazyAPI.all_items[prototype.type] then return end
 
-        local prototype = event.prototype
         local name = prototype.name
         local is_matched_item = unused_renders_m.items_data_path[name]
         if is_matched_item then
