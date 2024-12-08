@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 2024-12-08
+  Changes:
+    - Added GitHub issue tempaltes (see .github/ISSUE_TEMPLATE folder)
+    - Added GitHub actions (see .github/workflows folder)
+    - Added recommended extensions for VScode (see .vscode/extensions.json or find it via VScode)
+    - Added settings for VScode (see .vscode/settings.json)
+    - Added .lua-format
+    - Added .gitignore
+    - Added .gitattributes
+    - Added .editorconfig
+  Scripting:
+    - unused_renders_m contains fluids and entities now (see data.lua for details)
+---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 2024-12-07
   Changes:
@@ -28,7 +42,7 @@ Date: 2024-12-06
     - Added lua files to store image height, width as table, which named like images
     - Added data.lua file
     - Added util.lua file
-    - Added .scripts folder with several files (more info in .scripts folder) 
+    - Added .scripts folder with several files (more info in .scripts folder)
     - Added locale/en/unused-renders-m.cfg (localization is far from done)
     - Added prototypes/item folder with several files to store ItemPrototype for data stage
     - Added items_data_path.lua file as table which leads to lua files /\
