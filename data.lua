@@ -79,20 +79,35 @@ end
 
 --- Examples
 --[[
-    data:extend({unused_renders_m.prototypes.items["yellowcake"]})
+local item = unused_renders_m.prototypes.items["yellowcake"]
+if lazyAPI then
+	lazyAPI.add_prototype(item)
+else
+	data:extend({item}})
+end
 
-    data:extend({{
-        type = "item",
-        name = "fluoride",
-        icon = "__unused-renders-m__/item/mipped/material-crystal-fluorite-2.png",
-        icon_size = icon_size, icon_mipmaps = 4,
-        subgroup = "raw-material",
-        order = "g[fluoride]",
-        stack_size = 50,
-        pictures = {
-            unused_renders_m.get_image_as_sprite("item/mipped/material-crystal-fluorite-2.png"),
-        }
-    }})
+
+--- OR
+
+
+local item = {
+	type = "item",
+	name = "fluoride",
+	icon = "__unused-renders-m__/item/mipped/material-crystal-fluorite-2.png",
+	icon_size = icon_size,
+	subgroup = "raw-material",
+	order = "g[fluoride]",
+	stack_size = 50,
+	pictures = {
+		unused_renders_m.get_image_as_sprite("item/mipped/material-crystal-fluorite-2.png"),
+}
+
+if lazyAPI then
+	lazyAPI.add_prototype(item)
+else
+	data:extend({item}})
+end
+unused_renders_m.prototypes.items[item.name] = item
 ]]
 
 
