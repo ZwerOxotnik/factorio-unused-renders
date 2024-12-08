@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "eamodio.gitlens",
+    "sumneko.lua",
+    "davidanson.vscode-markdownlint",
+    "editorconfig.editorconfig",
+    "lextudio.restructuredtext",
+    "koihik.vscode-lua-format",
+    "mads-hartmann.bash-ide-vscode",
+    "formulahendry.code-runner",
+    "gruntfuggly.triggertaskonsave"
+  ]
+}
