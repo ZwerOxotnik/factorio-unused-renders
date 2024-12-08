@@ -6,7 +6,7 @@
   "author": "Malcolm Riley",
   "contact": "",
   "homepage": "",
-  "description": "It also provides meta data about images, templates, functions etc. in order to simplify/help with Factorio API, with mod compabiltiy and data consistency.\nMaintainer of this mod: ZwerOxotnik",
+  "description": "It also provides meta data about images, templates, functions etc. in order to simplify/help with Factorio API, with mod compabiltiy and data consistency.\nMaintainer of this mod: ZwerOxotnik ",
   "dependencies": [
     "? zk-lib"
   ]
