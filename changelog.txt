@@ -10,6 +10,7 @@ Date: 2024-12-08
     - Added .gitignore
     - Added .gitattributes
     - Added .editorconfig
+    - Changes were made by ZwerOxotnik
   Scripting:
     - unused_renders_m contains fluids and entities now (see data.lua for details)
 ---------------------------------------------------------------------------------------------------
