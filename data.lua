@@ -8,7 +8,6 @@ unused_renders_m = {
     tech_icon_paths    = require("__unused-renders-m__/tech-icon/image_data_paths"),
     items_data_path = require("__unused-renders-m__/items_data_path"),
 }
-unused_renders_m.items_data_path = require("__unused-renders-m__/items_data_path")
 
 --- WARNING: use pairs only if you're looking for created prototypes,
 ---          but keys could lead to the same prototype and it doesn't
@@ -18,6 +17,14 @@ unused_renders_m.items_data_path = require("__unused-renders-m__/items_data_path
 --- It helps to improve mod compatibility.
 ---@type table<string, data.ItemPrototype>
 unused_renders_m.items = {}
+
+--- Please, read comment of unused_renders_m.items
+---@type table<string, data.FluidPrototype>
+unused_renders_m.fluids = {}
+
+--- Please, read comment of unused_renders_m.items
+---@type table<string, data.EntityPrototype>
+unused_renders_m.entities = {}
 
 
 --[[
