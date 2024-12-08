@@ -12,7 +12,7 @@ Date: 2024-12-08
     - Added .editorconfig
     - Changes were made by ZwerOxotnik
   Scripting:
-    - unused_renders_m contains fluids and entities now (see data.lua for details)
+    - unused_renders_m.items etc. restructured to unused_renders_m.prototypes.items (see data.lua for details)
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 2024-12-07

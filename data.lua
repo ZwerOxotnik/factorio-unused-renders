@@ -12,19 +12,25 @@ unused_renders_m = {
 --- WARNING: use pairs only if you're looking for created prototypes,
 ---          but keys could lead to the same prototype and it doesn't
 ---          mean they exist in data.raw.
----          In other cases use unused_renders_m.items_data_path
---- Also, please, add item prototypes into unused_renders_m.items, if you added them by other methods.
+---          In other cases use unused_renders_m.items_data_path etc.
+---
+--- Also, please, add item prototypes into unused_renders_m.prototypes[key]
+--- and read its existing keys, if you added them by other methods.
 --- It helps to improve mod compatibility.
----@type table<string, data.ItemPrototype>
-unused_renders_m.items = {}
-
---- Please, read comment of unused_renders_m.items
----@type table<string, data.FluidPrototype>
-unused_renders_m.fluids = {}
-
---- Please, read comment of unused_renders_m.items
----@type table<string, data.EntityPrototype>
-unused_renders_m.entities = {}
+unused_renders_m.prototypes = {
+	--- Please, read unused_renders_m.prototyp
+	---@type table<string, data.ItemPrototype>
+	items = {},
+	--- Please, read unused_renders_m.prototyp
+	---@type table<string, data.FluidPrototype>
+	fluids = {},
+	--- Please, read unused_renders_m.prototypes
+	---@type table<string, data.EntityPrototype>
+	entities = {},
+	--- Please, read unused_renders_m.prototypes
+	---@type table<string, data.RecipePrototype>
+	recipe = {},
+}
 
 
 --[[
@@ -42,7 +48,7 @@ unused_renders_m.get_icon_size       = util.get_icon_size
 unused_renders_m.set_icon_data       = util.set_icon_data
 
 
-unused_renders_m.items = setmetatable(unused_renders_m.items, {
+unused_renders_m.prototypes.items = setmetatable(unused_renders_m.prototypes.items, {
     ---@param _k string
     __index = function(self, _k)
         local path = unused_renders_m.items_data_path[_k]
@@ -73,7 +79,7 @@ end
 
 --- Examples
 --[[
-    data:extend({unused_renders_m.items["yellowcake"]})
+    data:extend({unused_renders_m.prototypes.items["yellowcake"]})
 
     data:extend({{
         type = "item",
@@ -94,9 +100,9 @@ end
 --[[
 for name in pairs(unused_renders_m.items_data_path) do
     if lazyAPI then
-        lazyAPI.add_prototype(unused_renders_m.items[name])
+        lazyAPI.add_prototype(unused_renders_m.prototypes.items[name])
     else
-        data:extend({unused_renders_m.items[name]})
+        data:extend({unused_renders_m.prototypes.items[name]})
     end
 end
 ]]--
